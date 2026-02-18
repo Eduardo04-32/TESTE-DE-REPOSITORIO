@@ -1,115 +1,140 @@
 # HOLA MUNDO, BIENVENIDO A ESTE REPOSITORIO QUE NO TIENE NADA DEL OTRO MUNDO 
 
+# 📘 Guia Básico de Git e GitHub
 
+Guia simples dos principais comandos Git para clonar repositórios, criar branches, salvar alterações e enviar para o GitHub.
 
-AzureAD+JESUSSANCHEZ@SLE212029 MINGW64 ~
-$ cd documents
+---
 
-AzureAD+JESUSSANCHEZ@SLE212029 MINGW64 ~/documents
-$ git clone https://github.com/Eduardo04-32/TESTE-DE-REPOSITORIO.git
-Cloning into 'TESTE-DE-REPOSITORIO'...
-remote: Enumerating objects: 3, done.
-remote: Counting objects: 100% (3/3), done.
-remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
-Receiving objects: 100% (3/3), done.
+## 📥 Clonar repositório
 
-AzureAD+JESUSSANCHEZ@SLE212029 MINGW64 ~/documents
-$ cd TESTE-DE-REPOSITORIO
+```bash
+git clone URL_DO_REPOSITORIO
+```
 
-AzureAD+JESUSSANCHEZ@SLE212029 MINGW64 ~/documents/TESTE-DE-REPOSITORIO (main)
-$ git status
-On branch main
-Your branch is up to date with 'origin/main'.
+Baixa o projeto do GitHub para o seu computador.
 
-nothing to commit, working tree clean
+---
 
-AzureAD+JESUSSANCHEZ@SLE212029 MINGW64 ~/documents/TESTE-DE-REPOSITORIO (main)
-$ git status
-On branch main
-Your branch is up to date with 'origin/main'.
+## 📂 Entrar na pasta do projeto
 
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        arquivoooo.txt
+```bash
+cd nome-da-pasta
+```
 
-nothing added to commit but untracked files present (use "git add" to track)
+Entra na pasta do repositório clonado.
 
-AzureAD+JESUSSANCHEZ@SLE212029 MINGW64 ~/documents/TESTE-DE-REPOSITORIO (main)
-$ git add
-Nothing specified, nothing added.
-hint: Maybe you wanted to say 'git add .'?
-hint: Disable this message with "git config advice.addEmptyPathspec false"
+---
 
-AzureAD+JESUSSANCHEZ@SLE212029 MINGW64 ~/documents/TESTE-DE-REPOSITORIO (main)
-$ git add .
+## 🔍 Ver status do repositório
 
-AzureAD+JESUSSANCHEZ@SLE212029 MINGW64 ~/documents/TESTE-DE-REPOSITORIO (main)
-$ git status
-On branch main
-Your branch is up to date with 'origin/main'.
+```bash
+git status
+```
 
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-        new file:   arquivoooo.txt
+Mostra:
 
+- branch atual  
+- arquivos modificados  
+- arquivos novos  
+- arquivos prontos para commit  
 
-AzureAD+JESUSSANCHEZ@SLE212029 MINGW64 ~/documents/TESTE-DE-REPOSITORIO (main)
-$ git commit -m "Criado meu arquivo, não fiz muito luiz!!! "
-git commit -m "Criado meu arquivo, não fiz muito luizgit status! "
-[main 7c9bc2c] Criado meu arquivo, não fiz muito luizgit status!
- 1 file changed, 0 insertions(+), 0 deletions(-)
- create mode 100644 arquivoooo.txt
+---
 
-AzureAD+JESUSSANCHEZ@SLE212029 MINGW64 ~/documents/TESTE-DE-REPOSITORIO (main)
-$
+## 🌿 Trabalhando com Branches
 
-AzureAD+JESUSSANCHEZ@SLE212029 MINGW64 ~/documents/TESTE-DE-REPOSITORIO (main)
-$ git log
-commit 7c9bc2cf76a1fc8ae03ce91084ad559a7e8af40f (HEAD -> main)
-Author: Eduardo04-32 <jesus.sanchez32.12@gmail.com>
-Date:   Wed Feb 18 14:18:25 2026 -0300
+Branch = linha paralela de desenvolvimento para testar mudanças sem afetar a principal.
 
-    Criado meu arquivo, não fiz muito luizgit status!
+### 📌 Listar branches
 
-commit 2a7cbbf1d37bf0fad205102b11fe84820579ad7c (origin/main, origin/HEAD)
-Author: Eduardo04-32 <jesus.sanchez32.12@gmail.com>
-Date:   Wed Feb 18 13:53:53 2026 -0300
+```bash
+git branch
+```
 
-    Initial commit
+Mostra todas as branches. A atual tem `*`.
 
-AzureAD+JESUSSANCHEZ@SLE212029 MINGW64 ~/documents/TESTE-DE-REPOSITORIO (main)
-$ git push origin main
-info: please complete authentication in your browser...
-Enumerating objects: 4, done.
-Counting objects: 100% (4/4), done.
-Delta compression using up to 12 threads
-Compressing objects: 100% (2/2), done.
-Writing objects: 100% (3/3), 323 bytes | 323.00 KiB/s, done.
-Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
-To https://github.com/Eduardo04-32/TESTE-DE-REPOSITORIO.git
-   2a7cbbf..7c9bc2c  main -> main
+---
 
-AzureAD+JESUSSANCHEZ@SLE212029 MINGW64 ~/documents/TESTE-DE-REPOSITORIO (main)
-$ git push origin main
-Everything up-to-date
+### 🆕 Criar nova branch
 
-AzureAD+JESUSSANCHEZ@SLE212029 MINGW64 ~/documents/TESTE-DE-REPOSITORIO (main)
-$ git bramsh
-git: 'bramsh' is not a git command. See 'git --help'.
+```bash
+git branch nome-da-branch
+```
 
-The most similar command is
-        branch
+Cria uma branch baseada na atual.
 
-AzureAD+JESUSSANCHEZ@SLE212029 MINGW64 ~/documents/TESTE-DE-REPOSITORIO (main)
-$ git branch
-* main
+---
 
-AzureAD+JESUSSANCHEZ@SLE212029 MINGW64 ~/documents/TESTE-DE-REPOSITORIO (main)
-$ git branch "branch-teste"
+### 🔄 Trocar de branch
 
-AzureAD+JESUSSANCHEZ@SLE212029 MINGW64 ~/documents/TESTE-DE-REPOSITORIO (main)
-$ git checkout branch-teste
-Switched to branch 'branch-teste'
+```bash
+git checkout nome-da-branch
+```
 
-AzureAD+JESUSSANCHEZ@SLE212029 MINGW64 ~/documents/TESTE-DE-REPOSITORIO (branch-teste)
-$
+Muda para a branch escolhida.
+
+---
+
+## ➕ Adicionar arquivos
+
+```bash
+git add .
+```
+
+Adiciona todos os arquivos modificados para preparação.
+
+---
+
+## 💾 Criar commit
+
+```bash
+git commit -m "descrição da alteração"
+```
+
+Salva uma nova versão das mudanças.
+
+---
+
+## ☁️ Enviar para o GitHub
+
+```bash
+git push origin nome-da-branch
+```
+
+Envia os commits para o repositório remoto.
+
+---
+
+## 🔀 Pull Request
+
+Depois do push:
+
+1. Abra o repositório no GitHub  
+2. Clique em **Compare & Pull Request**  
+3. Confirme o Pull Request  
+
+---
+
+## 🚀 Fluxo completo de trabalho
+
+```bash
+git clone URL
+cd pasta
+git branch branch-teste
+git checkout branch-teste
+git add .
+git commit -m "minha alteração"
+git push origin branch-teste
+```
+
+---
+
+## ✅ Observações
+
+- Aviso LF/CRLF no Windows não é erro  
+- Use branches para testar mudanças  
+- Faça commits frequentes  
+- Escreva mensagens claras
+
+- <img width="733" height="999" alt="image" src="https://github.com/user-attachments/assets/be564c51-7002-4027-8594-6b22a7a660f4" />
+
